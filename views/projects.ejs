@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('shared/metaData') %>
+
+  <body class="d-flex flex-column min-vh-100">
+    <%- include('shared/header') %>
+
+    <main class="flex-grow-1">
+      <section class="py-5 text-center">
+        <h2 class="display-4">My Projects</h2>
+        <p class="lead mt-3">
+          Here are some of the projects I've been working on.
+        </p>
+      </section>
+
+      <section class="py-5 bg-light">
+        <div class="container row justify-content-evenly">
+          <% projects.forEach(project => { %>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h3 class="card-title"><%= project.title %></h3>
+                <p class="card-text"><%= project.description %></p>
+                <% if (project.image) { %>
+                <img
+                  src="<%= project.image %>"
+                  alt="<%= project.title %>"
+                  class="img-fluid rounded mb-3"
+                />
+                <% } %> <% if (project.github) { %>
+                <a
+                  href="<%= project.github %>"
+                  class="btn btn-primary"
+                  target="_blank"
+                  >GitHub</a
+                >
+                <% } %> <% if (project.deployed) { %>
+                <a
+                  href="<%= project.deployed %>"
+                  class="btn btn-success"
+                  target="_blank"
+                  >Deployed Project</a
+                >
+                <% } %>
+              </div>
+            </div>
+          </div>
+          <% }); %>
+        </div>
+      </section>
+    </main>
+
+    <%- include('shared/footer') %>
+  </body>
+</html>
