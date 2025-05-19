@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('shared/metaData', { title: "Home" }) %>
+  <%- include('shared/metaData') %>
   <body class="d-flex flex-column min-vh-100">
     <%- include('shared/header') %>
 
@@ -9,9 +9,10 @@
         <div class="container">
           <h1 class="display-4">Welcome to My Portfolio</h1>
           <p class="lead mt-3">
-            Building solutions with <strong>Express.js</strong>,
-            <strong>Flutter</strong>, and <strong>ASP.NET Core MVC</strong>.
-            Passionate about technology, social impact, and making a difference.
+            Creating purposeful tech with <strong>React</strong>,
+            <strong>Flutter</strong>, and <strong>Express.js</strong>. I build
+            solutions that empower people, promote social impact, and reflect my
+            passion for innovation and engineering.
           </p>
         </div>
       </section>
@@ -21,12 +22,12 @@
           <div class="row g-4">
             <div class="col-md-6">
               <div class="card h-100 p-4">
-                <h3 class="card-title">Me, in a nutshell</h3>
+                <h3 class="card-title">My Mission</h3>
                 <p class="card-text mt-3">
-                  I’m Fernando, an aspiring developer with a background in
-                  engineering and a passion for solving real-world problems with
-                  technology. I'm working on building my skills in **Flutter,
-                  ASP.NET, and Express.js**.
+                  To empower individuals through technology by building tools
+                  that promote self-sufficiency, personal growth, and social
+                  change — especially in response to systemic issues like
+                  violence and limited access to resources.
                 </p>
               </div>
             </div>
@@ -34,10 +35,11 @@
               <div class="card h-100 p-4">
                 <h3 class="card-title">My Vision</h3>
                 <p class="card-text">
-                  I want to use my technical skills to **build tools for social
-                  impact**, focusing on issues like anti-human trafficking and
-                  accessible technology. Passionate about **engineering, IoT,
-                  and innovation**.
+                  To become a fully trained human — mentally, physically,
+                  spiritually, and intellectually — while inspiring others
+                  through disciplined action. I envision creating solutions that
+                  bridge the gap between engineering, agriculture, self-defense,
+                  and accessible education through innovative software.
                 </p>
               </div>
             </div>
@@ -59,11 +61,21 @@
                 />
                 <div class="card-body d-flex flex-column">
                   <h3 class="card-title">Dragon Focus</h3>
+                  <span
+                    class="badge bg-warning text-dark position-absolute top-0 end-0 m-2"
+                  >
+                    Under Development
+                  </span>
                   <p class="card-text flex-grow-1">
-                    A local job-finding platform using **Flutter & Firebase**.
+                    A productivity app using the Pomodoro method to help users
+                    track focus sessions, projects, and habits. Built with the
+                    MERN stack.
                   </p>
-                  <a href="#" class="btn btn-primary mt-auto align-self-start"
-                    >View Project</a
+                  <a
+                    href="#"
+                    class="btn btn-outline-secondary mt-auto align-self-start disabled"
+                    disabled
+                    >In Progress</a
                   >
                 </div>
               </div>
@@ -72,23 +84,65 @@
             <div class="col-md-4">
               <div class="card h-100 shadow-sm">
                 <img
-                  src="/images/placeholder-project-2.jpg"
-                  class="card-img-top"
+                  src="/logo1.jpg"
+                  class="card-img-top bg-dark"
                   alt="Portfolio Website Thumbnail"
-                  style="height: 200px; object-fit: cover"
+                  style="height: 200px; object-fit: contain"
                 />
                 <div class="card-body d-flex flex-column">
-                  <h3 class="card-title">Portfolio Website</h3>
+                  <h3 class="card-title">CHAMBAS</h3>
+                  <span
+                    class="badge bg-warning text-dark position-absolute top-0 end-0 m-2"
+                  >
+                    Under Development
+                  </span>
                   <p class="card-text flex-grow-1">
-                    A personal brand showcase built with Express.js, EJS, and
-                    Neon.tech.
+                    A fullstack gig marketplace built on Flutter and Firebase,
+                    designed to connect local service providers with clients for
+                    weekend projects and side jobs. Includes secure user
+                    profiles, location-based search, and contract-based job
+                    negotiations.
                   </p>
-                  <a href="#" class="btn btn-primary mt-auto align-self-start"
-                    >View Project</a
+                  <a
+                    href="#"
+                    class="btn btn-outline-secondary mt-auto align-self-start disabled"
+                    disabled
+                    >In Progress</a
                   >
                 </div>
               </div>
             </div>
+
+            <!-- Placeholder for a third project -->
+            <!-- <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="/images/placeholder-project-3.jpg"
+                  class="card-img-top"
+                  alt="Third Project Placeholder"
+                  style="height: 200px; object-fit: cover"
+                />
+                <div class="card-body d-flex flex-column">
+                  <h3 class="card-title">Upcoming Project</h3>
+                  <span
+                    class="badge bg-warning text-dark position-absolute top-0 end-0 m-2"
+                  >
+                    Under Development
+                  </span>
+                  <p class="card-text flex-grow-1">
+                    A new initiative focused on empowering users with real-time
+                    tools for learning, collaboration, and growth. Coming soon —
+                    built with Flutter and Firebase.
+                  </p>
+                  <a
+                    href="#"
+                    class="btn btn-outline-secondary mt-auto align-self-start"
+                    disabled
+                    >In Progress</a
+                  >
+                </div>
+              </div>
+            </div> -->
           </div>
         </div>
       </section>
