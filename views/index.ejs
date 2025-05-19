@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('shared/metaData') %>
-
+  <%- include('shared/metaData', { title: "Home" }) %>
   <body class="d-flex flex-column min-vh-100">
     <%- include('shared/header') %>
 
@@ -49,24 +48,45 @@
       <section class="py-5">
         <div class="container">
           <h2 class="text-center mb-4">Highlighted Projects</h2>
-          <div class="row g-4">
+          <div class="row g-4 justify-content-center">
             <div class="col-md-4">
-              <div class="card h-100 p-4">
-                <h3 class="card-title">CHAMBAS</h3>
-                <p class="card-text">
-                  A local job-finding platform using **Flutter & Firebase**.
-                </p>
-                <a href="#" class="btn btn-primary mt-3">View Project</a>
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="/Quetzal.png"
+                  class="card-img-top"
+                  alt="CHAMBAS Project Thumbnail"
+                  style="height: 200px; object-fit: cover"
+                />
+                <div class="card-body d-flex flex-column">
+                  <h3 class="card-title">Dragon Focus</h3>
+                  <p class="card-text flex-grow-1">
+                    A local job-finding platform using **Flutter & Firebase**.
+                  </p>
+                  <a href="#" class="btn btn-primary mt-auto align-self-start"
+                    >View Project</a
+                  >
+                </div>
               </div>
             </div>
+
             <div class="col-md-4">
-              <div class="card h-100 p-4">
-                <h3 class="card-title">Portfolio Website</h3>
-                <p class="card-text">
-                  A personal brand showcase built with Express.js, EJS, and
-                  Neon.tech.
-                </p>
-                <a href="#" class="btn btn-primary mt-3">View Project</a>
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="/images/placeholder-project-2.jpg"
+                  class="card-img-top"
+                  alt="Portfolio Website Thumbnail"
+                  style="height: 200px; object-fit: cover"
+                />
+                <div class="card-body d-flex flex-column">
+                  <h3 class="card-title">Portfolio Website</h3>
+                  <p class="card-text flex-grow-1">
+                    A personal brand showcase built with Express.js, EJS, and
+                    Neon.tech.
+                  </p>
+                  <a href="#" class="btn btn-primary mt-auto align-self-start"
+                    >View Project</a
+                  >
+                </div>
               </div>
             </div>
           </div>
