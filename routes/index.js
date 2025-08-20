@@ -22,23 +22,15 @@ router.get("/contact", (req, res) => {
   });
 });
 
-// Projects page - Disabled for now for lack of projects, will improve as projects are added.
-// router.get("/projects", (req, res) => {
-//   const projects = [
-//     {
-//       title: "Dragon Focus",
-//       description:
-//         "A productivity app based on the pomodoro technique + gamified features",
-//       image: "/Quetzal.png",
-//     },
-//     {
-//       title: "Project 2",
-//       description: "This is project 2.",
-//       image: "/images/project2.png",
-//     },
-//   ];
-//   res.render("projects", { title: "My Projects", projects: projects }); // Changed to title
-// });
+// Services page
+router.get("/servicios", (req, res) => {
+  res.render("servicios", { title: "Servicios" });
+});
+
+// Case Studies page
+router.get("/casos-de-exito", (req, res) => {
+  res.render("casos-de-exito", { title: "Casos de Éxito" });
+});
 
 // Handle contact form submission
 router.post("/contact", async (req, res) => {

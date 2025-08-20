@@ -1,48 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('shared/metaData') %>
+  <%- include('shared/metaData', {title: "Consultor de Operaciones y Comercio Digital" }) %>
+
   <body class="d-flex flex-column min-vh-100">
     <%- include('shared/header') %>
 
     <main class="flex-grow-1">
-      <section class="py-5 text-center">
+      <section class="py-5 text-center bg-light">
         <div class="container">
-          <h1 class="display-4">Welcome to My Portfolio</h1>
-          <p class="lead mt-3">
-            Creating purposeful tech with <strong>React</strong>,
-            <strong>Flutter</strong>, and <strong>Express.js</strong>. I build
-            solutions that empower people, promote social impact, and reflect my
-            passion for innovation and engineering.
+          <h1 class="display-4 fw-bold">
+            Transforme su Negocio y Venda en Línea con Éxito
+          </h1>
+          <p class="lead mt-3 mx-auto" style="max-width: 800px">
+            Soy un <strong>Consultor de Operaciones y Comercio Digital</strong>.
+            Deje la tecnología en mis manos y enfóquese en lo que mejor sabe
+            hacer: crecer su negocio.
           </p>
+          <a href="/contact" class="btn btn-primary btn-lg mt-4"
+            >Agendar una Consulta Gratuita</a
+          >
+        </div>
+      </section>
+
+      <section class="py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="fw-bold">¿Se Siente Abrumado por la Tecnología?</h2>
+            <p class="lead text-muted">
+              Ayudo a dueños de negocios como usted a superar los retos
+              digitales.
+            </p>
+          </div>
+          <div class="row g-4 text-center">
+            <div class="col-md-4">
+              <div class="card h-100 p-3 shadow-sm border-0">
+                <div class="card-body">
+                  <i class="fas fa-rocket fa-3x text-primary mb-3"></i>
+                  <h5 class="card-title fw-bold">Lanzamiento Digital</h5>
+                  <p class="card-text">
+                    Si no sabe por dónde empezar, yo construyo su tienda online
+                    desde cero, lista para vender.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 p-3 shadow-sm border-0">
+                <div class="card-body">
+                  <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
+                  <h5 class="card-title fw-bold">Optimización y Crecimiento</h5>
+                  <p class="card-text">
+                    Si su tienda actual no genera ventas, la optimizo para
+                    convertir visitantes en clientes.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 p-3 shadow-sm border-0">
+                <div class="card-body">
+                  <i class="fas fa-cogs fa-3x text-primary mb-3"></i>
+                  <h5 class="card-title fw-bold">Eficiencia Operativa</h5>
+                  <p class="card-text">
+                    Si pierde tiempo en tareas manuales, automatizo sus procesos
+                    para que pueda enfocarse en la estrategia.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="py-5 bg-light">
         <div class="container">
-          <div class="row g-4">
-            <div class="col-md-6">
-              <div class="card h-100 p-4">
-                <h3 class="card-title">My Mission</h3>
-                <p class="card-text mt-3">
-                  To empower people—especially in underserved
-                  communities—through practical, accessible technology. I aim to
-                  build tools that promote self-sufficiency, lifelong learning,
-                  and resilience in the face of social and structural
-                  challenges.
-                </p>
+          <h2 class="text-center fw-bold mb-4">Vea Mis Resultados</h2>
+          <div class="row g-4 justify-content-center">
+            <div class="col-md-5">
+              <div class="card h-100 shadow-sm">
+                <video
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  src="/Yefrem.mp4"
+                  class="card-img-top"
+                  style="height: 250px; object-fit: cover; object-position: top"
+                  aria-label="A short video of the Yefrem Mx Shopify store"
+                ></video>
+                <div class="card-body d-flex flex-column">
+                  <h3 class="card-title">Caso de Éxito: Yefrem Mx</h3>
+                  <p class="card-text flex-grow-1">
+                    Lanzamiento de una tienda Shopify profesional para una marca
+                    local de cuidado del cabello. Se implementó un diseño
+                    atractivo, configuración de pagos y una estructura
+                    optimizada para la conversión desde el primer día.
+                  </p>
+                  <a
+                    href="https://www.yefrem.mx/"
+                    class="btn btn-outline-primary mt-auto align-self-start"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Ver Tienda en Línea
+                  </a>
+                </div>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="card h-100 p-4">
-                <h3 class="card-title">My Vision</h3>
-                <p class="card-text">
-                  To grow into a well-rounded human—mentally, physically,
-                  spiritually, and intellectually—while building technology that
-                  connects disciplines like engineering, agriculture,
-                  self-defense, and education. Through disciplined action and
-                  meaningful software, I hope to inspire others to pursue
-                  independence, purpose, and community-driven change.
-                </p>
+
+            <div class="col-md-5">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="/Quetzal.png"
+                  class="card-img-top"
+                  alt="Arte conceptual de la aplicación Dragon Focus"
+                  style="height: 250px; object-fit: cover"
+                />
+                <div class="card-body d-flex flex-column">
+                  <h3 class="card-title">
+                    Capacidad Técnica para Soluciones a Medida
+                  </h3>
+                  <p class="card-text flex-grow-1">
+                    Para clientes con necesidades que van más allá de Shopify,
+                    poseo la experiencia técnica para construir aplicaciones
+                    complejas desde cero. <strong>Dragon Focus</strong> es un
+                    ejemplo de mi capacidad para desarrollar sistemas robustos y
+                    escalables.
+                  </p>
+                  <a
+                    href="https://dragon-focus.onrender.com/"
+                    class="btn btn-outline-secondary mt-auto align-self-start"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Ver Prototipo Técnico
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -51,119 +144,34 @@
 
       <section class="py-5">
         <div class="container">
-          <h2 class="text-center mb-4">Highlighted Projects</h2>
-          <div class="row g-4 justify-content-center">
-            <div class="col-md-4">
-              <div class="card h-100 shadow-sm">
-                <img
-                  src="/Quetzal.png"
-                  class="card-img-top"
-                  alt="CHAMBAS Project Thumbnail"
-                  style="height: 200px; object-fit: cover"
-                />
-                <div class="card-body d-flex flex-column">
-                  <h3 class="card-title">Dragon Focus</h3>
-                  <span
-                    class="badge bg-warning text-dark position-absolute top-0 end-0 m-2"
-                  >
-                    Beta v0.8
-                  </span>
-                  <p class="card-text flex-grow-1">
-                    A productivity web app based on the Pomodoro technique,
-                    designed to help users manage focus sessions, track
-                    projects, and build habits. Built with the MERN stack.
-                    Currently in active development with core features
-                    implemented and testing underway.
-                  </p>
-                  <a
-                    href="https://dragon-focus.onrender.com/"
-                    class="btn btn-primary mt-auto align-self-start"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View Beta
-                  </a>
-                </div>
+          <div class="row align-items-center g-md-5">
+            <div class="col-lg-4 text-center">
+              <div
+                class="bg-light rounded d-flex align-items-center justify-content-center"
+                style="height: 300px; width: 300px; margin: auto"
+              >
+                <p class="text-muted">Nueva Foto Profesional Próximamente</p>
               </div>
             </div>
-
-            <div class="col-md-4">
-              <div class="card h-100 shadow-sm">
-                <img
-                  src="/ChambasLogo.jpg"
-                  class="card-img-top bg-dark"
-                  alt="Portfolio Website Thumbnail"
-                  style="height: 200px; object-fit: contain"
-                />
-                <div class="card-body d-flex flex-column">
-                  <h3 class="card-title">CHAMBAS</h3>
-                  <span
-                    class="badge bg-warning text-dark position-absolute top-0 end-0 m-2"
-                  >
-                    Under Development
-                  </span>
-                  <p class="card-text flex-grow-1">
-                    A fullstack gig marketplace built on Flutter and Firebase,
-                    designed to connect local service providers with clients for
-                    weekend projects and side jobs. Includes secure user
-                    profiles, location-based search, and contract-based job
-                    negotiations.
-                  </p>
-                  <a
-                    href="#"
-                    class="btn btn-outline-secondary mt-auto align-self-start disabled"
-                    disabled
-                    >In Progress</a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <!-- Weather Dashboard Project Card -->
-            <div class="col-md-4">
-              <div class="card h-100 shadow-sm">
-                <img
-                  src="/WeatherDashboard.png"
-                  class="card-img-top"
-                  alt="Weather Dashboard Screenshot"
-                  style="height: 200px; object-fit: cover"
-                />
-                <div class="card-body d-flex flex-column">
-                  <h3 class="card-title">Weather Dashboard</h3>
-                  <!-- Use a "success" badge for completed projects -->
-                  <span
-                    class="badge bg-success text-white position-absolute top-0 end-0 m-2"
-                  >
-                    Live
-                  </span>
-                  <p class="card-text flex-grow-1">
-                    A full-stack weather app with a Node.js/Express backend and
-                    a dynamic vanilla JS frontend. This project serves as a
-                    playground for working with third-party APIs and
-                    implementing a full testing suite including E2E,
-                    integration, and unit tests.
-                  </p>
-                  <!-- Buttons for both the live app and the code -->
-                  <div class="mt-auto">
-                    <a
-                      href="https://weather-dashboard-beta-eight-12.vercel.app/"
-                      class="btn btn-primary"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Live Demo
-                    </a>
-                    <a
-                      href="https://github.com/Fer-work/weatherDashboard"
-                      class="btn btn-outline-secondary"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      View Code
-                    </a>
-                  </div>
-                </div>
-              </div>
+            <div class="col-lg-8">
+              <h2 class="fw-bold">
+                Mi Enfoque Único: Ingeniería de Operaciones + Estrategia Digital
+              </h2>
+              <p class="lead">
+                No soy solo un desarrollador; soy un ingeniero de sistemas por
+                formación. Pienso en procesos, eficiencia y resultados.
+              </p>
+              <p>
+                Mi experiencia en mecatrónica y software me enseñó a construir sistemas
+                complejos que funcionan de manera fiable. Ahora aplico esa misma
+                mentalidad a su negocio digital. Analizo sus operaciones,
+                identifico cuellos de botella y construyo una plataforma de
+                e-commerce que no solo se ve bien, sino que es una máquina de
+                ventas eficiente y fácil de gestionar.
+              </p>
+              <a href="/about" class="btn btn-outline-primary mt-3"
+                >Conozca más sobre mi filosofía</a
+              >
             </div>
           </div>
         </div>
