@@ -1,38 +1,51 @@
+<%# The 'currentPath' variable must be passed from your route when rendering the page %>
+<%# Example: res.render("index", { title: "...", currentPath: req.path }); %>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="container">
-    <a href="/" class="navbar-brand">🚀 Fernando Sanchez Gutierrez</a>
-    <button
-      class="navbar-toggler"
-      data-bs-target="#my-nav"
-      data-bs-toggle="collapse"
-      aria-controls="my-nav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+    <a href="/" class="navbar-brand">
+      <i class="fas fa-chart-line me-2"></i>Fernando S. Gutierrez
+    </a>
+    <button class="navbar-toggler" data-bs-target="#my-nav" data-bs-toggle="collapse" aria-controls="my-nav"
+      aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div id="my-nav" class="collapse navbar-collapse">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a href="/" class="nav-link"><i class="fas fa-home me-1"></i>Home</a>
+          <a href="/"
+            class="nav-link <%= (typeof currentPath !== 'undefined' && currentPath === '/') ? 'active' : '' %>"
+            <%= (typeof currentPath !== 'undefined' && currentPath === '/') ? 'aria-current="page"' : '' %>>
+            <i class="fas fa-home me-1"></i>Inicio
+          </a>
         </li>
         <li class="nav-item">
-          <a href="/about" class="nav-link"
-            ><i class="fas fa-user me-1"></i>Sobre Mí</a
-          >
+          <a href="/about"
+            class="nav-link <%= (typeof currentPath !== 'undefined' && currentPath === '/about') ? 'active' : '' %>"
+            <%= (typeof currentPath !== 'undefined' && currentPath === '/about') ? 'aria-current="page"' : '' %>>
+            <i class="fas fa-user me-1"></i>Sobre Mí
+          </a>
         </li>
         <li class="nav-item">
-          <a href="/servicios" class="nav-link"
-            ><i class="fas fa-concierge-bell me-1"></i>Servicios</a
-          >
+          <a href="/servicios"
+            class="nav-link <%= (typeof currentPath !== 'undefined' && currentPath === '/servicios') ? 'active' : '' %>"
+            <%= (typeof currentPath !== 'undefined' && currentPath === '/servicios') ? 'aria-current="page"' : '' %>>
+            <i class="fas fa-concierge-bell me-1"></i>Servicios
+          </a>
         </li>
         <li class="nav-item">
-          <a href="/casos-de-exito" class="nav-link"><i class="fas fa-briefcase me-1"></i>Casos de Éxito</a>
+          <a href="/casos-de-exito"
+            class="nav-link <%= (typeof currentPath !== 'undefined' && currentPath === '/casos-de-exito') ? 'active' : '' %>"
+            <%= (typeof currentPath !== 'undefined' && currentPath === '/casos-de-exito') ? 'aria-current="page"' : '' %>>
+            <i class="fas fa-briefcase me-1"></i>Casos de Éxito
+          </a>
         </li>
         <li class="nav-item">
-          <a href="/contact" class="nav-link"
-            ><i class="fas fa-envelope me-1"></i>Contacto</a
-          >
+          <a href="/contact"
+            class="nav-link <%= (typeof currentPath !== 'undefined' && currentPath === '/contact') ? 'active' : '' %>"
+            <%= (typeof currentPath !== 'undefined' && currentPath === '/contact') ? 'aria-current="page"' : '' %>>
+            <i class="fas fa-envelope me-1"></i>Contacto
+          </a>
         </li>
       </ul>
     </div>

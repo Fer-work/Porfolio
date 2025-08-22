@@ -1,96 +1,121 @@
 const express = require("express");
 const router = express.Router();
-const nodemailer = require("nodemailer");
-// dotenv should be required in your main app index.js, so it's available here via process.env
+const { body, validationResult } = require("express-validator");
+const rateLimit = require("express-rate-limit");
+const { sendContactEmail } = require("../utils/emailService"); // Import our new service
 
-// Home page - REMEMBER to change pageTitle to title
+// Home page
 router.get("/", (req, res) => {
-  res.render("index", { title: "Home Page" }); // Changed to title
-});
-
-// About page - REMEMBER to change pageTitle to title
-router.get("/about", (req, res) => {
-  res.render("about", { title: "About Me" }); // Changed to title
-});
-
-// Contact page - REMEMBER to change pageTitle to title
-router.get("/contact", (req, res) => {
-  res.render("contact", {
-    title: "Contact Me", // Use 'title'
-    messageSent: null, // To initialize for the EJS template
-    formData: {}, // Initialize formData as an empty object
+  res.render("index", {
+    title: "Consultor de Operaciones y Comercio Digital",
+    currentPath: req.path,
   });
+});
+
+// About page
+router.get("/about", (req, res) => {
+  res.render("about", { title: "Sobre Mí", currentPath: req.path });
 });
 
 // Services page
 router.get("/servicios", (req, res) => {
-  res.render("servicios", { title: "Servicios" });
+  res.render("servicios", { title: "Servicios", currentPath: req.path });
 });
 
 // Case Studies page
 router.get("/casos-de-exito", (req, res) => {
-  res.render("casos-de-exito", { title: "Casos de Éxito" });
+  res.render("casos-de-exito", {
+    title: "Casos de Éxito",
+    currentPath: req.path,
+  });
 });
 
-// Handle contact form submission
-router.post("/contact", async (req, res) => {
-  const { name, email, message } = req.body; // 'subject' is no longer destructured here
-  const subject = req.body.subject || "New Contact Form Submission"; // Use subject if provided, or a default
-
-  // Basic validation
-  if (!name || !email || !message) {
-    return res.render("contact", {
-      title: "Contact Me",
-      messageSent: false,
-      messageText: "Please fill in all required fields (Name, Email, Message).",
-      formData: req.body,
-    });
-  }
-
-  try {
-    let transporter = nodemailer.createTransport({
-      host: process.env.EMAIL_HOST,
-      port: parseInt(process.env.EMAIL_PORT, 10),
-      secure: process.env.EMAIL_SECURE === "true",
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
-
-    let mailOptions = {
-      from: `"${name}" <${process.env.EMAIL_USER}>`,
-      replyTo: email,
-      to: process.env.MY_EMAIL,
-      subject: subject, // Using the 'subject' variable (either from form or default)
-      text: `You have a new message from:\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
-      html: `
-        <h3>New Contact Form Submission</h3>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
-        <p><strong>Message:</strong></p>
-        <p>${message.replace(/\n/g, "<br>")}</p>
-      `,
-    };
-
-    await transporter.sendMail(mailOptions);
-
-    res.render("contact", {
-      title: "Contact Me",
-      messageSent: true,
-      messageText: "Thank you for your message! I'll get back to you soon.",
-      formData: {}, // Clear form data on success
-    });
-  } catch (error) {
-    console.error("Error sending email:", error);
-    res.render("contact", {
-      title: "Contact Me",
-      messageSent: false,
-      messageText:
-        "Sorry, there was an error sending your message. Please try again later.",
-      formData: req.body, // Send back form data on error
-    });
-  }
+router.get("/contact", (req, res) => {
+  res.render("contact", {
+    title: "Contacto",
+    messageSent: null,
+    formData: {},
+    errors: [], // Initialize errors array
+    currentPath: req.path,
+  });
 });
+
+// --- Contact Form Handling ---
+
+// 1. Rate Limiter: a basic security measure to prevent spam/brute-force attacks
+const contactFormLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 5, // Limit each IP to 5 form submissions per windowMs
+  message:
+    "Too many submissions from this IP, please try again after 15 minutes.",
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
+// 2. Validation Rules for the contact form
+const contactFormValidationRules = [
+  body("name")
+    .trim()
+    .isLength({ min: 2 })
+    .withMessage("El nombre debe tener al menos 2 caracteres.")
+    .escape(),
+  body("email")
+    .isEmail()
+    .withMessage(
+      "Por favor, ingrese una dirección de correo electrónico válida."
+    )
+    .normalizeEmail(),
+  body("message")
+    .trim()
+    .isLength({ min: 10 })
+    .withMessage("El mensaje debe tener al menos 10 caracteres.")
+    .escape(),
+];
+
+// 3. The POST route with rate limiting, validation, and the new email service
+router.post(
+  "/contact",
+  contactFormLimiter,
+  contactFormValidationRules,
+  async (req, res) => {
+    const errors = validationResult(req);
+    const { name, email, message } = req.body;
+    const subject = "New Contact Form Submission from Portfolio";
+
+    if (!errors.isEmpty()) {
+      return res.render("contact", {
+        title: "Contacto",
+        messageSent: false,
+        messageText:
+          res.message || "Por favor, corrija los errores en el formulario.",
+        formData: req.body,
+        errors: errors.array(), // Pass errors to the template
+      });
+    }
+
+    try {
+      await sendContactEmail({ name, email, subject, message });
+
+      res.render("contact", {
+        title: "Contacto",
+        messageSent: true,
+        messageText:
+          "¡Gracias por su mensaje! Me pondré en contacto con usted pronto.",
+        formData: {},
+        errors: [],
+      });
+    } catch (error) {
+      console.error("Error sending email:", error);
+      res.render("contact", {
+        title: "Contacto",
+        messageSent: false,
+        messageText:
+          "Lo sentimos, hubo un error al enviar su mensaje. Por favor, intente de nuevo más tarde.",
+        formData: req.body,
+        errors: [],
+      });
+    }
+  }
+);
 
 module.exports = router;

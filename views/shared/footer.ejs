@@ -1,43 +1,29 @@
-<footer class="bg-dark text-light py-4 mt-5">
-  <style>
-    .fab {
-      font-size: 1.5rem; /* Adjust this value for bigger or smaller icons */
-    }
-  </style>
-  <div class="container">
+<footer class="bg-dark text-light py-5 mt-auto">
+  <div class="container text-center">
     <div class="row">
-      <div class="col-md-6 text-center text-md-start">
-        <p>&copy; 2025 Fernando Sanchez Gutierrez. All rights reserved.</p>
-      </div>
-      <div class="col-md-6 text-center text-md-end">
-        <ul class="list-inline">
-          <li class="list-inline-item mx-2">
-            <a
-              href="https://github.com/Fer-work"
-              target="_blank"
-              aria-label="GitHub"
-              class="text-light"
-            >
-              <i class="fab fa-github"></i>
-            </a>
+      <div class="col-12">
+        <h5 class="fw-bold">Fernando Sanchez Gutierrez</h5>
+        <p class="text-muted">Consultor de Operaciones y Comercio Digital</p>
+
+        <ul class="list-inline my-4">
+          <li class="list-inline-item mx-2"><a href="/" class="text-light text-decoration-none">Inicio</a></li>
+          <li class="list-inline-item mx-2"><a href="/servicios" class="text-light text-decoration-none">Servicios</a>
           </li>
-          <li class="list-inline-item mx-2">
-            <a
-              href="https://www.linkedin.com/in/fernando-sanchez-gutierrez-309848208/"
-              target="_blank"
-              aria-label="LinkedIn"
-              class="text-light"
-            >
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </li>
+          <li class="list-inline-item mx-2"><a href="/casos-de-exito" class="text-light text-decoration-none">Casos de
+              Éxito</a></li>
+          <li class="list-inline-item mx-2"><a href="/about" class="text-light text-decoration-none">Sobre Mí</a></li>
+          <li class="list-inline-item mx-2"><a href="/contact" class="text-light text-decoration-none">Contacto</a></li>
         </ul>
+
+        <p class="small mt-4 mb-0">
+          &copy; <%= new Date().getFullYear() %> Fernando Sanchez Gutierrez. Todos los derechos reservados.
+        </p>
+
       </div>
     </div>
   </div>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-    crossorigin="anonymous"
-  ></script>
+    crossorigin="anonymous"></script>
 </footer>
