@@ -8,10 +8,9 @@
   <main class="flex-grow-1">
     <section class="py-5 text-center bg-light">
       <div class="container">
-        <h1 class="display-4 fw-bold">Soluciones Digitales a la Medida de su Negocio</h1>
+        <h1 class="display-4 fw-bold"><%= t('servicesPage.hero.title') %></h1>
         <p class="lead mt-3 mx-auto" style="max-width: 800px;">
-          Ya sea que necesite lanzar una tienda en línea o desarrollar una herramienta de software personalizada,
-          ofrezco soluciones claras y efectivas.
+          <%= t('servicesPage.hero.subtitle') %>
         </p>
       </div>
     </section>
@@ -19,40 +18,44 @@
     <section class="py-5">
       <div class="container ">
         <div class="text-center mb-5">
-          <h2 class="fw-bold">Paquetes Express (Soluciones Rápidas)</h2>
-          <p class="lead text-muted">Para negocios con contenido listo que necesitan una ejecución profesional y veloz a
-            un precio accesible.</p>
+          <h2 class="fw-bold"><%= t('servicesPage.express.title') %></h2>
+          <p class="lead text-muted"><%= t('servicesPage.express.subtitle') %></p>
         </div>
         <div class="row justify-content-center g-4">
           <div class="col-lg-4 d-flex align-items-stretch">
             <div class="card h-100 shadow-sm text-center border-primary w-100">
               <div class="card-body d-flex flex-column w-100 flex-grow-1 ">
-                <h4 class="card-title fw-bold">Sitio Web Básico</h4>
-                <p class="card-text small">Portafolios, Páginas de Reservas.</p>
-                <p class="h3 fw-bold my-3">$2,500 <span class="h6 text-muted">MXN</span></p>
-                <p class="small text-muted">Entrega en 1-3 días hábiles</p>
+                <h4 class="card-title fw-bold"><%= t('servicesPage.express.card1_title') %></h4>
+                <p class="card-text small"><%= t('servicesPage.express.card1_text') %></p>
+                <p class="h3 fw-bold my-3"><%= t('servicesPage.express.card1_price') %> <span
+                    class="h6 text-muted"><%= t('servicesPage.express.card1_price_span') %></span></p>
+                <p class="small text-muted"><%= t('servicesPage.express.card1_delivery') %></p>
               </div>
             </div>
           </div>
 
+          <!-- Paquete: Sitio Web Informativo -->
           <div class="col-lg-4 d-flex align-items-stretch">
             <div class="card h-100 shadow-sm text-center border-primary w-100">
               <div class="card-body d-flex flex-column">
-                <h4 class="card-title fw-bold">Sitio Web Informativo</h4>
-                <p class="card-text small">Sitios de 3 a 5 páginas para negocios.</p>
-                <p class="h3 fw-bold my-3">$4,500 <span class="h6 text-muted">MXN</span></p>
-                <p class="small text-muted">Entrega en 1 semana</p>
+                <h4 class="card-title fw-bold"><%= t('servicesPage.express.card2_title') %></h4>
+                <p class="card-text small"><%= t('servicesPage.express.card2_text') %></p>
+                <p class="h3 fw-bold my-3"><%= t('servicesPage.express.card2_price') %> <span
+                    class="h6 text-muted"><%= t('servicesPage.express.card2_price_span') %></span></p>
+                <p class="small text-muted"><%= t('servicesPage.express.card2_delivery') %></p>
               </div>
             </div>
           </div>
 
+          <!-- Paquete: E-Commerce Básico -->
           <div class="col-lg-4 d-flex align-items-stretch">
             <div class="card h-100 shadow-sm text-center border-primary w-100">
               <div class="card-body d-flex flex-column">
-                <h4 class="card-title fw-bold">E-Commerce Básico</h4>
-                <p class="card-text small">Tiendas en línea con hasta 20 productos.</p>
-                <p class="h3 fw-bold my-3">$5,000 <span class="h6 text-muted">MXN</span></p>
-                <p class="small text-muted">Entrega en 1 semana</p>
+                <h4 class="card-title fw-bold"><%= t('servicesPage.express.card3_title') %></h4>
+                <p class="card-text small"><%= t('servicesPage.express.card3_text') %></p>
+                <p class="h3 fw-bold my-3"><%= t('servicesPage.express.card3_price') %> <span
+                    class="h6 text-muted"><%= t('servicesPage.express.card3_price_span') %></span></p>
+                <p class="small text-muted"><%= t('servicesPage.express.card3_delivery') %></p>
               </div>
             </div>
           </div>
@@ -60,43 +63,47 @@
 
         </div>
         <div class="text-center mt-4 pt-3">
-          <p><strong>Todos los Paquetes Express Incluyen:</strong> Diseño adaptable a móviles, integración con redes
-            sociales y hasta 3 rondas de revisiones.</p>
-          <p class="small text-muted">Nota: El cliente proporciona textos/imágenes. Costos de dominio/hosting no
-            incluidos (se brinda asesoría).</p>
+          <p><strong><%= t('servicesPage.express.footer_title') %></strong> <%= t('servicesPage.express.footer_text') %>
+          </p>
+          <p class="small text-muted"> <%= t('servicesPage.express.footer_note') %></p>
         </div>
       </div>
     </section>
 
+    <!-- TIER 2: CONSULTORÍA ESTRATÉGICA -->
     <section class="py-5 bg-light">
       <div class="container">
         <div class="text-center mb-5">
-          <h2 class="fw-bold">Soluciones de E-Commerce y Operaciones</h2>
-          <p class="lead text-muted">Para negocios listos para vender en línea.</p>
+          <h2 class="fw-bold"><%= t('servicesPage.strategic.title') %></h2>
+          <p class="lead text-muted"><%= t('servicesPage.strategic.subtitle') %></p>
         </div>
         <div class="row justify-content-center g-4">
 
+          <!-- Proyecto Estratégico a Medida -->
           <div class="col-lg-5 d-flex align-items-stretch">
             <div class="card h-100 shadow-sm border-primary border-2 w-100">
               <div class="card-header bg-primary text-white text-center ">
-                <h3 class="my-2">Lanzamiento Digital</h3>
+                <h3 class="my-2"><%= t('servicesPage.strategic.card1_title') %></h3>
               </div>
               <div class="card-body d-flex flex-column">
-                <p class="card-text"><strong>Ideal para:</strong> Negocios que buscan establecer una presencia en línea
-                  profesional desde cero.</p>
+                <p><%= t('servicesPage.strategic.card1_text') %></p>
                 <ul class="list-unstyled flex-grow-1 mt-3">
-                  <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Tienda en Línea Profesional
-                    (Shopify)</li>
-                  <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Tienda en Marketplace (Mercado
-                    Libre)</li>
-                  <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Configuración de Logística y
-                    Pagos</li>
-                  <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>30 días de Soporte
-                    Post-Lanzamiento</li>
+                  <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>
+                    <%= t('servicesPage.strategic.card1_list_item1') %>
+                  </li>
+                  <li class="mb-2"><i
+                      class="fas fa-check-circle text-success me-2"></i><%= t('servicesPage.strategic.card1_list_item2') %>
+                  </li>
+                  <li class="mb-2"><i
+                      class="fas fa-check-circle text-success me-2"></i><%= t('servicesPage.strategic.card1_list_item3') %>
+                  </li>
+                  <li class="mb-2"><i
+                      class="fas fa-check-circle text-success me-2"></i><%= t('servicesPage.strategic.card1_list_item5') %>
+                  </li>
                 </ul>
                 <div class="text-center">
-                  <p class="h4 fw-bold">Desde $10,000 - $15,000 MXN</p>
-                  <p class="text-muted">(Pago Único)</p>
+                  <p class="h4 fw-bold"><%= t('servicesPage.strategic.card1_price_title') %></p>
+                  <p class="text-muted"><%= t('servicesPage.strategic.card1_price_detail') %></p>
                 </div>
               </div>
             </div>
@@ -105,27 +112,28 @@
           <div class="col-lg-5 d-flex align-items-stretch">
             <div class="card h-100 shadow-sm border-primary border-2">
               <div class="card-header bg-primary text-white text-center">
-                <h3 class="my-2">Socio de Crecimiento</h3>
+                <h3 class="my-2"><%= t('servicesPage.strategic.card2_title') %></h3>
               </div>
               <div class="card-body d-flex flex-column">
-                <p class="card-text"><strong>Perfecto para:</strong> Negocios que buscan un socio estratégico para
-                  gestionar y escalar sus ventas.</p>
+                <p class="card-text"><%= t('servicesPage.strategic.card2_text') %></p>
                 <ul class="list-unstyled flex-grow-1 mt-3">
-                  <li class="mb-2"><i class="fas fa-star text-warning me-2"></i><strong>Todo lo del Paquete
-                      Lanzamiento</strong></li>
-                  <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Gestión Continua de Plataformas
+                  <li class="mb-2"><i
+                      class="fas fa-star text-warning me-2"></i><strong><%= t('servicesPage.strategic.card2_list_item1') %></strong>
                   </li>
-                  <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Análisis y Reportes Semanales
+                  <li class="mb-2"><i
+                      class="fas fa-check-circle text-success me-2"></i><%= t('servicesPage.strategic.card2_list_item2') %>
                   </li>
-                  <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Optimización de Tasa de
-                    Conversión</li>
+                  <li class="mb-2"><i
+                      class="fas fa-check-circle text-success me-2"></i><%= t('servicesPage.strategic.card2_list_item3') %>
+                  </li>
+                  <li class="mb-2"><i
+                      class="fas fa-check-circle text-success me-2"></i><%= t('servicesPage.strategic.card2_list_item5') %>
+                  </li>
                 </ul>
                 <div class="text-center mt-auto">
-                  <p class="h4 fw-bold mb-1">10% - 15% de Comisión Mensual</p>
-                  <p class="mb-2">+ Cuota de Activación Única</p>
-                  <p class="small text-muted px-3">
-                    (La cuota es el 50% del costo del proyecto "Lanzamiento Digital" y cubre la construcción inicial de
-                    sus tiendas).
+                  <p class="h4 fw-bold my-2"><%= t('servicesPage.strategic.card2_price_title') %></p>
+                  <p class="text-muted px-3">
+                    <%= t('servicesPage.strategic.card2_price_detail') %>
                   </p>
                 </div>
               </div>
@@ -138,21 +146,18 @@
     <section class="py-5 ">
       <div class="container">
         <div class="text-center mb-5">
-          <h2 class="fw-bold">Soluciones de Software a Medida</h2>
-          <p class="lead text-muted">Para profesionales y negocios con necesidades únicas.</p>
+          <h2 class="fw-bold"><%= t('servicesPage.customSoftware.title') %></h2>
+          <p class="lead text-muted"><%= t('servicesPage.customSoftware.subtitle') %></p>
         </div>
         <div class="row justify-content-center g-4">
-
-
 
           <div class="col-lg-4 d-flex align-items-stretch">
             <div class="card h-100 shadow-sm border-primary">
               <div class="card-body d-flex flex-column">
-                <h4 class="card-title fw-bold">Herramienta Web a Medida</h4>
-                <p class="card-text">Desde calculadoras interactivas hasta portales para clientes y automatización de
-                  procesos.</p>
+                <h4 class="card-title fw-bold"><%= t('servicesPage.customSoftware.card_title') %></h4>
+                <p class="card-text"><%= t('servicesPage.customSoftware.card_text') %></p>
                 <div class="text-center mt-auto pt-3">
-                  <p class="h5">Se cotiza por proyecto</p>
+                  <p class="h5"><%= t('servicesPage.customSoftware.card_price_title') %></p>
                 </div>
               </div>
             </div>
@@ -165,49 +170,49 @@
       <div class="container">
         <div class="row g-5">
           <div class="col-lg-7">
-            <h2 class="fw-bold mb-4">Servicios Adicionales</h2>
+            <h2 class="fw-bold mb-4"><%= t('servicesPage.addons.title') %></h2>
             <ul class="list-group list-group-flush">
               <li class="list-group-item d-flex justify-content-between align-items-center ps-0">
                 <div>
-                  <h6 class="my-0">Sesión de Consultoría Estratégica</h6>
-                  <small class="text-muted">Asesoría de 1 hora para resolver dudas puntuales.</small>
+                  <h6 class="my-0"><%= t('servicesPage.addons.item1_title') %></h6>
+                  <small class="text-muted"><%= t('servicesPage.addons.item1_subtitle') %></small>
                 </div>
-                <span class="badge bg-primary rounded-pill">$600 MXN</span>
+                <span class="badge bg-primary rounded-pill"><%= t('servicesPage.addons.item1_price') %></span>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center ps-0">
                 <div>
-                  <h6 class="my-0">Mantenimiento Web Mensual</h6>
-                  <small class="text-muted">Actualizaciones, backups y soporte técnico.</small>
+                  <h6 class="my-0"><%= t('servicesPage.addons.item2_title') %></h6>
+                  <small class="text-muted"><%= t('servicesPage.addons.item2_subtitle') %></small>
                 </div>
-                <span class="badge bg-primary rounded-pill">Desde $950 / mes</span>
+                <span class="badge bg-primary rounded-pill"><%= t('servicesPage.addons.item2_price') %></span>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center ps-0">
                 <div>
-                  <h6 class="my-0">Configuración de Calendly</h6>
-                  <small class="text-muted">Ideal para el Paquete Express de Sitio Básico.</small>
+                  <h6 class="my-0"><%= t('servicesPage.addons.item3_title') %></h6>
+                  <small class="text-muted"><%= t('servicesPage.addons.item3_subtitle') %></small>
                 </div>
-                <span class="badge bg-primary rounded-pill">$500 (pago único)</span>
+                <span class="badge bg-primary rounded-pill"><%= t('servicesPage.addons.item3_price') %></span>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center ps-0">
                 <div>
-                  <h6 class="my-0">Portal de Mayoreo (B2B)</h6>
-                  <small class="text-muted">Implementación de un portal privado en Shopify.</small>
+                  <h6 class="my-0"><%= t('servicesPage.addons.item4_title') %></h6>
+                  <small class="text-muted"><%= t('servicesPage.addons.item4_subtitle') %></small>
                 </div>
-                <span class="badge bg-secondary rounded-pill">Desde $5,000 MXN</span>
+                <span class="badge bg-secondary rounded-pill"><%= t('servicesPage.addons.item4_price') %></span>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center ps-0">
                 <div>
-                  <h6 class="my-0">Consultoría Técnica Especializada</h6>
-                  <small class="text-muted">Integraciones con APIs, automatizaciones, etc.</small>
+                  <h6 class="my-0"><%= t('servicesPage.addons.item5_title') %></h6>
+                  <small class="text-muted"><%= t('servicesPage.addons.item5_subtitle') %></small>
                 </div>
-                <span class="badge bg-secondary rounded-pill">Se cotiza por proyecto</span>
+                <span class="badge bg-secondary rounded-pill"><%= t('servicesPage.addons.item5_price') %></span>
               </li>
             </ul>
           </div>
           <div class="col-lg-5">
-            <h2 class="fw-bold mb-4">Alternativas de Pago</h2>
-            <p>Para proyectos de única ocasión, ofrezco planes de 2 o 3 pagos para mayor flexibilidad.</p>
-            <a href="/contact" class="btn btn-outline-primary">Contacte para más detalles</a>
+            <h2 class="fw-bold mb-4"><%= t('servicesPage.paymentOptions.title') %></h2>
+            <p><%= t('servicesPage.paymentOptions.subtitle') %></p>
+            <a href="/contact" class="btn btn-outline-primary"><%= t('servicesPage.paymentOptions.button') %></a>
           </div>
         </div>
       </div>

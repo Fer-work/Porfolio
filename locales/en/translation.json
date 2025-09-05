@@ -1,0 +1,231 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "services": "Services",
+    "caseStudies": "Case Studies",
+    "contact": "Contact"
+  },
+  "validation": {
+    "nameRequired": "Name must be at least 2 characters long.",
+    "emailInvalid": "Please enter a valid email address.",
+    "messageRequired": "Message must be at least 10 characters long."
+  },
+  "home": {
+    "hero": {
+      "title": "Transform Your Business and Sell Online Successfully",
+      "subtitle": "I am an Operations and Digital Commerce Consultant. Let's boost your business together with technology and strategy for limitless growth.",
+      "cta": "Schedule a Free Consultation"
+    },
+    "painPoints": {
+      "title": "Feeling Overwhelmed by Technology?",
+      "subtitle": "I help business owners like you overcome digital challenges.",
+      "card1_title": "Digital Launch",
+      "card1_text": "If you don't know where to start, I'll build your online store from scratch, ready to sell.",
+      "card2_title": "Optimization & Growth",
+      "card2_text": "If your current store isn't generating sales, I'll optimize it to turn visitors into customers.",
+      "card3_title": "Operational Efficiency",
+      "card3_text": "If you're wasting time on manual tasks, I'll automate your processes so you can focus on strategy."
+    },
+    "results": {
+      "title": "See My Results",
+      "yefrem_title": "Case Study: Yefrem Mx",
+      "yefrem_text": "Launch of a professional Shopify store for a local hair care brand. Implemented an attractive design, payment setup, and a structure optimized for conversion from day one.",
+      "yefrem_cta": "View Live Store",
+      "dragon_title": "Technical Capability for Custom Solutions",
+      "dragon_text": "For clients with needs beyond Shopify, I have the technical expertise to build complex applications from scratch. Dragon Focus is an example of my ability to develop robust and scalable systems.",
+      "dragon_cta": "View Technical Prototype"
+    },
+    "whyMe": {
+      "title": "My Unique Approach: Operations Engineering + Digital Strategy",
+      "subtitle": "I'm not just a developer; I'm a systems engineer by training. I think in terms of processes, efficiency, and results.",
+      "text": "My experience in mechatronics and software taught me to build complex systems that work reliably. I now apply that same mindset to your digital business. I analyze your operations, identify bottlenecks, and build an e-commerce platform that not only looks good but is an efficient and easy-to-manage sales machine.",
+      "cta": "Learn more about my philosophy"
+    }
+  },
+  "aboutPage": {
+    "hero": {
+      "title": "My Approach: Engineering + Digital Strategy",
+      "subtitle": "I don't just build online stores; I design efficient sales systems. My background as an engineer allows me to see your business as a complete system, optimizing every piece to ensure your digital operation is profitable and easy to manage."
+    },
+    "bio": {
+      "title": "From Engineering to Digital Retail",
+      "p1": "My career began in the world of mechatronics, designing and building automated systems. That experience taught me a fundamental lesson: for something to work well, every component must work in perfect harmony.",
+      "p2": "Today, I apply that same philosophy to e-commerce. Your online store isn't just a webpage; it's the engine of your digital business. It must integrate perfectly with your inventory, shipping logistics, payment gateways, and marketing strategies. My job is to ensure the entire system runs smoothly, freeing you up to focus on your product and your customers."
+    },
+    "mission": {
+      "title": "My Mission as Your Consultant",
+      "p1": "My goal is simple: to help business owners transform their ideas into profitable and sustainable sales channels. I do this through a practical and transparent approach, where your success is my success.",
+      "cta_services": "View My Consulting Packages",
+      "cta_contact": "Schedule a Call"
+    },
+    "hobbies": {
+      "title": "When I'm Not Optimizing Businesses...",
+      "card1_title": "Practical Engineering",
+      "card1_text": "I keep my hardware skills sharp by experimenting with electronics and robotics.",
+      "card2_title": "Sustainable Systems",
+      "card2_text": "I design and build aquaponics systems, merging biology and automation.",
+      "card3_title": "Discipline and Focus",
+      "card3_text": "Martial arts training is key to my philosophy of growth and self-discipline."
+    }
+  },
+  "servicesPage": {
+    "hero": {
+      "title": "Digital Solutions for Every Stage of Your Business",
+      "subtitle": "From a quick launch to a long-term growth strategy, I have a service designed for your needs and budget."
+    },
+    "express": {
+      "title": "Tier 1: Express Packages (Fast Solutions)",
+      "subtitle": "For businesses with ready content who need professional and swift execution at an affordable price.",
+      "card1_title": "Basic Website",
+      "card1_text": "Portfolios, Booking Pages.",
+      "card1_price": "$300",
+      "card1_price_span": "CAD",
+      "card1_delivery": "Delivery in 1-3 business days",
+
+      "card2_title": "Informational Website",
+      "card2_text": "3 to 5-page sites for businesses.",
+      "card2_price": "$550",
+      "card2_price_span": "CAD",
+      "card2_delivery": "Delivery in 1 week",
+
+      "card3_title": "Basic E-Commerce",
+      "card3_text": "Online stores with up to 20 products.",
+      "card3_price": "$600",
+      "card3_price_span": "CAD",
+      "card3_delivery": "Delivery in 1 week",
+
+      "includes_title": "All Express Packages Include:",
+      "includes_text": "Mobile-responsive design, social media integration, and up to 3 rounds of minor revisions.",
+      "includes_note": "Note: Client provides text/images. Domain/hosting costs not included (guidance is provided).",
+      "footer_title": "All packages include:",
+      "footer_text": "Mobile device adaptability, integration with social media (instagram, whatsapp, facebook, etc.) and up to 3 rounds of revisions.",
+      "footer_note": "Note: The client provides text and images. Costs for domain/hosting are not included. (Support is provided to acquire these)."
+    },
+    "strategic": {
+      "title": "Tier 2: Strategic Consultancy (E-Commerce & Operations)",
+      "subtitle": "For clients seeking a business partner to define and execute a complete digital strategy.",
+      "card1_title": "Digital Launch Project",
+      "card1_text": "An integral service that includes strategy, business analysis, custom design and support from beginning to end in order to make sure that the software aligns with your business needs.",
+      "card1_list_item1": "Professional Online Store (Shopify)",
+      "card1_list_item2": "Marketplace Store (Mercado Libre)",
+      "card1_list_item3": "Logistics and Payment Setup",
+      "card1_list_item5": "30 Days of Post-Launch Support",
+      "card1_price_title": "From $800 - $1,000 CAD",
+      "card1_price_detail": "(One-time Payment)",
+
+      "card2_title": "Growth Partner",
+      "card2_text": "A long term partnership model, deisgned to grow with you. Your success is my success.",
+      "card2_list_item1": "Everything from the Launch Package",
+      "card2_list_item2": "Continuous Platform Management",
+      "card2_list_item3": "Weekly Analysis and Reports",
+      "card2_list_item5": "Conversion Rate Optimization",
+      "card2_price_title": "One-time Activation Fee + Monthly Commission",
+      "card2_price_detail": "(The fee covers the initial setup of your stores)."
+    },
+    "customSoftware": {
+      "title": "Custom Software Solutions",
+      "subtitle": "For professionals and businesses with unique needs.",
+      "card_title": "Custom Web Tool",
+      "card_text": "From interactive calculators to customer portals and process automation.",
+      "card_price_title": "Quoted per project"
+    },
+    "addons": {
+      "title": "Additional Services",
+      "item1_title": "Strategic Consulting Session (1 hour)",
+      "item1_subtitle": "1-hour advisory session to resolve specific questions.",
+      "item1_price": "$50 CAD",
+
+      "item2_title": "Monthly Web Maintenance",
+      "item2_subtitle": "Updates, backups, and technical support.",
+      "item2_price": "From $$75 CAD / month",
+
+      "item3_title": "Calendly Setup",
+      "item3_subtitle": "Ideal for the Basic Website Express Package.",
+      "item3_price": "$50 CAD (one-time payment)",
+
+      "item4_title": "Wholesale Portal (B2B)",
+      "item4_subtitle": "Implementation of a bulk portal on Shopify.",
+      "item4_price": "From $600 CAD",
+
+      "item5_title": "Specialized Technical Consulting",
+      "item5_subtitle": "API integrations, custom automations, etc.",
+      "item5_price": "Quoted per project"
+    },
+    "paymentOptions": {
+      "title": "Payment Alternatives",
+      "subtitle": "For one-time projects, I offer payment plans for greater flexibility.",
+      "button": "Contact for more details"
+    }
+  },
+  "caseStudiesPage": {
+    "hero": {
+      "title": "Case Studies",
+      "subtitle": "Real results for real businesses. Here I detail how I have helped my clients transform their ideas into successful digital operations."
+    },
+    "yefrem": {
+      "title": "Yefrem Mx: Strategic Partner in Operations and Digital Growth",
+      "badge": "Service: Growth Partner",
+      "lead": "A hair care brand with an excellent product was looking not just to launch their store, but for an operational partner to manage their entire online sales strategy.",
+      "challenge_title": "The Challenge",
+      "challenge_text": "The client needed an expert to take charge of the entire digital ecosystem—from the technology to daily management and marketing—allowing them to focus solely on the product and delivery logistics.",
+      "solution_title": "The Comprehensive Solution",
+      "solution_item1": "Complete Technology Management: Stores on Shopify and Mercado Libre were implemented and are now continuously managed.",
+      "solution_item2": "Operations Optimization: Handling of the sales operation, from generating shipping labels to integrating label printers.",
+      "solution_item3": "Growth Strategy: Implementation of a wholesale (B2B) portal and initial marketing campaigns to drive the first sales.",
+      "solution_item4": "Analysis and Reporting: Delivery of weekly performance reports on the platforms to make data-driven decisions.",
+      "result_title": "The Result",
+      "result_text": "A true strategic partnership. Yefrem Mx has a director of digital operations who actively manages their growth, based on a commission model where success is shared (10% of online sales).",
+      "cta_button": "Visit Live Store"
+    },
+    "dragonFocus": {
+      "title": "Dragon Focus: Custom Application Development",
+      "badge": "Demonstration of Technical Capability",
+      "lead": "This project demonstrates the ability to build complex and custom solutions when a client's needs go beyond standard platforms like Shopify.",
+      "challenge_title": "The Challenge",
+      "challenge_text": "To create a full-stack web application from scratch that was secure, scalable, and had a fluid user experience, managing user data, real-time sessions, and analytics.",
+      "solution_title": "The Technical Solution",
+
+      "solution_item1_title": "Complete Technology Management:",
+      "solution_item1": "Development of a robust backend with Node.js and Express.js to manage business logic and APIs.",
+
+      "solution_item2_title": "Operations Optimization:",
+      "solution_item2": "Implementation of a MongoDB database for flexible and scalable data storage.",
+
+      "solution_item3_title": "Growth Strategy:",
+      "solution_item3": "Construction of a dynamic and interactive user interface with React.JS.",
+
+      "solution_item4_title": "Analysis and Reporting:",
+      "solution_item4": "Ensuring code quality and robustness by applying my experience in QA Testing throughout the entire development cycle.",
+      "result_title": "The Result",
+      "result_text": "A functional web application deployed to production, which validates my ability to handle projects of high technical complexity from start to finish, guaranteeing a high-quality final product.",
+      "cta_button": "View Technical Prototype"
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "title": "Let's Talk About Your Project",
+      "subtitle": "The next step is a free, no-commitment 30-minute consultation to discuss your goals and how I can help you achieve them."
+    },
+    "schedule": {
+      "title": "1. Schedule a Call Directly",
+      "text": "The fastest and most efficient way to get started. Choose a time that works for you on my calendar, and the meeting will be confirmed instantly."
+    },
+    "form": {
+      "title": "2. Or Send Me a Message",
+      "text": "If you prefer, you can send me a message with the details of your project or any questions you may have.",
+      "nameLabel": "Your Name",
+      "emailLabel": "Your Email",
+      "messageLabel": "Your Message",
+      "button": "Send Message"
+    },
+    "messages": {
+      "success": "Thank you for your message! I will get in touch with you shortly.",
+      "error": "Sorry, there was an error sending your message. Please try again later."
+    }
+  },
+  "footer": {
+    "subtitle": "Digital Operations and E-commerce consultant",
+    "rights": "All rights reserved."
+  }
+}

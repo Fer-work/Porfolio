@@ -2,118 +2,142 @@ const express = require("express");
 const router = express.Router();
 const { body, validationResult } = require("express-validator");
 const rateLimit = require("express-rate-limit");
-const { sendContactEmail } = require("../utils/emailService"); // Import our new service
+const { sendContactEmail } = require("../utils/emailService");
 
-// Home page
+// --- Redirección de Idioma ---
 router.get("/", (req, res) => {
+  res.redirect("/es");
+});
+
+// --- Rutas de Página con Prefijo de Idioma ---
+
+// Página de Inicio
+router.get("/:lng(es|en)", (req, res) => {
   res.render("index", {
-    title: "Consultor de Operaciones y Comercio Digital",
+    title: req.t("nav.home"),
     currentPath: req.path,
+    originalUrl: req.originalUrl,
   });
 });
 
-// About page
-router.get("/about", (req, res) => {
-  res.render("about", { title: "Sobre Mí", currentPath: req.path });
+// Página Sobre Mí
+router.get("/:lng(es|en)/about", (req, res) => {
+  res.render("about", {
+    title: req.t("nav.about"),
+    currentPath: req.path,
+    originalUrl: req.originalUrl,
+  });
 });
 
-// Services page
-router.get("/servicios", (req, res) => {
-  res.render("servicios", { title: "Servicios", currentPath: req.path });
+// Página de Servicios
+router.get("/:lng(es|en)/servicios", (req, res) => {
+  res.render("servicios", {
+    title: req.t("nav.services"),
+    currentPath: req.path,
+    originalUrl: req.originalUrl,
+  });
 });
 
-// Case Studies page
-router.get("/casos-de-exito", (req, res) => {
+// Página de Casos de Éxito
+router.get("/:lng(es|en)/casos-de-exito", (req, res) => {
   res.render("casos-de-exito", {
-    title: "Casos de Éxito",
+    title: req.t("nav.caseStudies"),
     currentPath: req.path,
+    originalUrl: req.originalUrl,
   });
 });
 
-router.get("/contact", (req, res) => {
+// Página de Contacto (GET)
+router.get("/:lng(es|en)/contact", (req, res) => {
+  const status = req.query.status;
+  let messageSent = null;
+  let messageText = "";
+
+  if (status === "success") {
+    messageSent = true;
+    messageText = req.t("contactPage.messages.success");
+  } else if (status === "error") {
+    messageSent = false;
+    messageText = req.t("contactPage.messages.error");
+  } else if (status === "validation_error") {
+    messageSent = false;
+    messageText = req.t("validation.generalError");
+  }
+
   res.render("contact", {
-    title: "Contacto",
-    messageSent: null,
-    formData: {},
-    errors: [], // Initialize errors array
+    title: req.t("nav.contact"),
     currentPath: req.path,
+    originalUrl: req.originalUrl,
+    messageSent: messageSent,
+    messageText: messageText,
+    formData: {}, // Siempre vaciamos el formulario al cargar
+    errors: [],
   });
 });
 
-// --- Contact Form Handling ---
-
-// 1. Rate Limiter: a basic security measure to prevent spam/brute-force attacks
+// --- Manejo del Formulario de Contacto ---
 const contactFormLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 5, // Limit each IP to 5 form submissions per windowMs
+  windowMs: 15 * 60 * 1000,
+  max: 5,
   message:
-    "Too many submissions from this IP, please try again after 15 minutes.",
+    "Demasiados envíos desde esta IP, por favor intente de nuevo en 15 minutos.",
   standardHeaders: true,
   legacyHeaders: false,
 });
 
-// 2. Validation Rules for the contact form
-const contactFormValidationRules = [
+const contactFormValidationRules = (t) => [
   body("name")
     .trim()
     .isLength({ min: 2 })
-    .withMessage("El nombre debe tener al menos 2 caracteres.")
+    .withMessage(t("validation.nameRequired"))
     .escape(),
   body("email")
     .isEmail()
-    .withMessage(
-      "Por favor, ingrese una dirección de correo electrónico válida."
-    )
+    .withMessage(t("validation.emailInvalid"))
     .normalizeEmail(),
   body("message")
     .trim()
     .isLength({ min: 10 })
-    .withMessage("El mensaje debe tener al menos 10 caracteres.")
+    .withMessage(t("validation.messageRequired"))
     .escape(),
 ];
 
-// 3. The POST route with rate limiting, validation, and the new email service
 router.post(
   "/contact",
   contactFormLimiter,
-  contactFormValidationRules,
+  (req, res, next) => {
+    const rules = contactFormValidationRules(req.t);
+    Promise.all(rules.map((validation) => validation.run(req))).then(() =>
+      next()
+    );
+  },
   async (req, res) => {
     const errors = validationResult(req);
     const { name, email, message } = req.body;
-    const subject = "New Contact Form Submission from Portfolio";
+    const subject = "Nuevo Envío de Formulario desde el Portafolio";
+    const currentLang = req.body.lang || "es";
+    const contactUrl = `/${currentLang}/contact`;
 
     if (!errors.isEmpty()) {
       return res.render("contact", {
-        title: "Contacto",
+        title: req.t("nav.contact"),
+        currentPath: contactUrl,
+        originalUrl: contactUrl,
         messageSent: false,
-        messageText:
-          res.message || "Por favor, corrija los errores en el formulario.",
+        messageText: null,
         formData: req.body,
-        errors: errors.array(), // Pass errors to the template
+        errors: errors.array(),
       });
     }
 
     try {
       await sendContactEmail({ name, email, subject, message });
-
-      res.render("contact", {
-        title: "Contacto",
-        messageSent: true,
-        messageText:
-          "¡Gracias por su mensaje! Me pondré en contacto con usted pronto.",
-        formData: {},
-        errors: [],
-      });
+      // CORRECCIÓN: Usar directamente contactUrl
+      res.redirect(`${contactUrl}?status=success`);
     } catch (error) {
-      console.error("Error sending email:", error);
-      res.render("contact", {
-        title: "Contacto",
-        messageSent: false,
-        messageText:
-          "Lo sentimos, hubo un error al enviar su mensaje. Por favor, intente de nuevo más tarde.",
-        formData: req.body,
-        errors: [],
-      });
+      console.error("Error al enviar el correo:", error);
+      // CORRECCIÓN: Usar directamente contactUrl
+      res.redirect(`${contactUrl}?status=error`);
     }
   }
 );

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('shared/metaData', {title: "Consultor de Operaciones y Comercio Digital" }) %>
+<%- include('shared/metaData', {title: t('nav.home') }) %>
 
 <body class="d-flex flex-column min-vh-100">
   <%- include('shared/header') %>
@@ -8,36 +8,28 @@
   <main class="flex-grow-1">
     <section class="py-5 text-center bg-light">
       <div class="container">
-        <h1 class="display-4 fw-bold">
-          Transforme su Negocio y Venda en Línea con Éxito
-        </h1>
+        <h1 class="display-4 fw-bold"> <%= t('home.hero.title') %> </h1>
         <p class="lead mt-3 mx-auto" style="max-width: 800px">
-          Soy un <strong>Consultor de Operaciones y Comercio Digital</strong>.
-          Impulsemos tu negocio juntos, tecnología y estrategia para crecer sin límites.
+          <%- t('home.hero.subtitle') %>
         </p>
-        <a href="/contact" class="btn btn-primary btn-lg mt-4">Agendar una Consulta Gratuita</a>
+        <a href="/<%= i18n.language %>/contact" class="btn btn-primary btn-lg mt-4"><%= t('home.hero.cta') %></a>
       </div>
     </section>
 
+    <!-- PAIN POINTS SECTION -->
     <section class="py-5">
       <div class="container">
         <div class="text-center mb-5">
-          <h2 class="fw-bold">¿Se Siente Abrumado por la Tecnología?</h2>
-          <p class="lead text-muted">
-            Ayudo a dueños de negocios como usted a superar los retos
-            digitales.
-          </p>
+          <h2 class="fw-bold"><%= t('home.painPoints.title') %></h2>
+          <p class="lead text-muted"><%= t('home.painPoints.subtitle') %></p>
         </div>
         <div class="row g-4 text-center">
           <div class="col-md-4">
             <div class="card h-100 p-3 shadow-sm border-0">
               <div class="card-body">
                 <i class="fas fa-rocket fa-3x text-primary mb-3"></i>
-                <h5 class="card-title fw-bold">Lanzamiento Digital</h5>
-                <p class="card-text">
-                  Si no sabe por dónde empezar, yo construyo su tienda online
-                  desde cero, lista para vender.
-                </p>
+                <h5 class="card-title fw-bold"><%= t('home.painPoints.card1_title') %></h5>
+                <p class="card-text"><%= t('home.painPoints.card1_text') %></p>
               </div>
             </div>
           </div>
@@ -45,11 +37,8 @@
             <div class="card h-100 p-3 shadow-sm border-0">
               <div class="card-body">
                 <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
-                <h5 class="card-title fw-bold">Optimización y Crecimiento</h5>
-                <p class="card-text">
-                  Si su tienda actual no genera ventas, la optimizo para
-                  convertir visitantes en clientes.
-                </p>
+                <h5 class="card-title fw-bold"><%= t('home.painPoints.card2_title') %></h5>
+                <p class="card-text"><%= t('home.painPoints.card2_text') %></p>
               </div>
             </div>
           </div>
@@ -57,11 +46,8 @@
             <div class="card h-100 p-3 shadow-sm border-0">
               <div class="card-body">
                 <i class="fas fa-cogs fa-3x text-primary mb-3"></i>
-                <h5 class="card-title fw-bold">Eficiencia Operativa</h5>
-                <p class="card-text">
-                  Si pierde tiempo en tareas manuales, automatizo sus procesos
-                  para que pueda enfocarse en la estrategia.
-                </p>
+                <h5 class="card-title fw-bold"><%= t('home.painPoints.card3_title') %></h5>
+                <p class="card-text"><%= t('home.painPoints.card3_text') %></p>
               </div>
             </div>
           </div>
@@ -71,7 +57,7 @@
 
     <section class="py-5 bg-light">
       <div class="container">
-        <h2 class="text-center fw-bold mb-4">Vea Mis Resultados</h2>
+        <h2 class="text-center fw-bold mb-4"><%= t('home.results.title') %></h2>
         <div class="row g-4 justify-content-center">
           <div class="col-md-5">
             <div class="card h-100 shadow-sm">
@@ -79,16 +65,11 @@
                 style="height: 250px; object-fit: cover; object-position: top"
                 aria-label="A short video of the Yefrem Mx Shopify store"></video>
               <div class="card-body d-flex flex-column">
-                <h3 class="card-title">Caso de Éxito: Yefrem Mx</h3>
-                <p class="card-text flex-grow-1">
-                  Lanzamiento de una tienda Shopify profesional para una marca
-                  local de cuidado del cabello. Se implementó un diseño
-                  atractivo, configuración de pagos y una estructura
-                  optimizada para la conversión desde el primer día.
-                </p>
+                <h3 class="card-title"><%= t('home.results.yefrem_title') %></h3>
+                <p class="card-text flex-grow-1"><%= t('home.results.yefrem_text') %></p>
                 <a href="https://www.yefrem.mx/" class="btn btn-outline-primary mt-auto align-self-start"
                   target="_blank" rel="noopener noreferrer">
-                  Ver Tienda en Línea
+                  <%= t('home.results.yefrem_cta') %>
                 </a>
               </div>
             </div>
@@ -96,22 +77,14 @@
 
           <div class="col-md-5">
             <div class="card h-100 shadow-sm">
-              <img src="/Quetzal.png" class="card-img-top" alt="Arte conceptual de la aplicación Dragon Focus"
+              <img src="/flameBackground.png" class="card-img-top" alt="Arte conceptual de la aplicación Dragon Focus"
                 style="height: 250px; object-fit: cover" />
               <div class="card-body d-flex flex-column">
-                <h3 class="card-title">
-                  Capacidad Técnica para Soluciones a Medida
-                </h3>
-                <p class="card-text flex-grow-1">
-                  Para clientes con necesidades que van más allá de Shopify,
-                  poseo la experiencia técnica para construir aplicaciones
-                  complejas desde cero. <strong>Dragon Focus</strong> es un
-                  ejemplo de mi capacidad para desarrollar sistemas robustos y
-                  escalables.
-                </p>
+                <h3 class="card-title"><%= t('home.results.dragon_title') %></h3>
+                <p class="card-text flex-grow-1"><%- t('home.results.dragon_text') %></p>
                 <a href="https://dragon-focus.onrender.com/" class="btn btn-outline-secondary mt-auto align-self-start"
                   target="_blank" rel="noopener noreferrer">
-                  Ver Prototipo Técnico
+                  <%= t('home.results.dragon_cta') %>
                 </a>
               </div>
             </div>
@@ -136,22 +109,10 @@
           </div>
 
           <div class="col-lg-8">
-            <h2 class="fw-bold">
-              Mi Enfoque Único: Ingeniería de Operaciones + Estrategia Digital
-            </h2>
-            <p class="lead">
-              No soy solo un desarrollador; soy un ingeniero de sistemas por
-              formación. Pienso en procesos, eficiencia y resultados.
-            </p>
-            <p>
-              Mi experiencia en mecatrónica y software me enseñó a construir sistemas
-              complejos que funcionan de manera fiable. Ahora aplico esa misma
-              mentalidad a su negocio digital. Analizo sus operaciones,
-              identifico cuellos de botella y construyo una plataforma de
-              e-commerce que no solo se ve bien, sino que es una máquina de
-              ventas eficiente y fácil de gestionar.
-            </p>
-            <a href="/about" class="btn btn-outline-primary mt-3">Conozca más sobre mi filosofía</a>
+            <h2 class="fw-bold"><%= t('home.whyMe.title') %></h2>
+            <p class="lead"><%= t('home.whyMe.subtitle') %></p>
+            <p><%= t('home.whyMe.text') %></p>
+            <a href="/<%= i18n.language %>/about" class="btn btn-outline-primary mt-3"><%= t('home.whyMe.cta') %></a>
           </div>
         </div>
       </div>

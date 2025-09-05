@@ -1,0 +1,232 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre Mí",
+    "services": "Servicios",
+    "caseStudies": "Casos de Éxito",
+    "contact": "Contacto"
+  },
+  "validation": {
+    "nameRequired": "El nombre debe tener al menos 2 caracteres.",
+    "emailInvalid": "Por favor, ingrese una dirección de correo electrónico válida.",
+    "messageRequired": "El mensaje debe tener al menos 10 caracteres."
+  },
+  "home": {
+    "hero": {
+      "title": "Transforme su Negocio y Venda en Línea con Éxito",
+      "subtitle": "Soy un Consultor de Operaciones y Comercio Digital. Impulsemos tu negocio juntos, tecnología y estrategia para crecer sin límites.",
+      "cta": "Agendar una Consulta Gratuita"
+    },
+    "painPoints": {
+      "title": "¿Se Siente Abrumado por la Tecnología?",
+      "subtitle": "Ayudo a dueños de negocios como usted a superar los retos digitales.",
+      "card1_title": "Lanzamiento Digital",
+      "card1_text": "Si no sabe por dónde empezar, yo construyo su tienda online desde cero, lista para vender.",
+      "card2_title": "Optimización y Crecimiento",
+      "card2_text": "Si su tienda actual no genera ventas, la optimizo para convertir visitantes en clientes.",
+      "card3_title": "Eficiencia Operativa",
+      "card3_text": "Si pierde tiempo en tareas manuales, automatizo sus procesos para que pueda enfocarse en la estrategia."
+    },
+    "results": {
+      "title": "Vea Mis Resultados",
+      "yefrem_title": "Caso de Éxito: Yefrem Mx",
+      "yefrem_text": "Lanzamiento de una tienda Shopify profesional para una marca local de cuidado del cabello. Se implementó un diseño atractivo, configuración de pagos y una estructura optimizada para la conversión desde el primer día.",
+      "yefrem_cta": "Ver Tienda en Línea",
+      "dragon_title": "Capacidad Técnica para Soluciones a Medida",
+      "dragon_text": "Para clientes con necesidades que van más allá de Shopify, poseo la experiencia técnica para construir aplicaciones complejas desde cero. Dragon Focus es un ejemplo de mi capacidad para desarrollar sistemas robustos y escalables.",
+      "dragon_cta": "Ver Prototipo Técnico"
+    },
+    "whyMe": {
+      "title": "Mi Enfoque Único: Ingeniería de Operaciones + Estrategia Digital",
+      "subtitle": "No soy solo un desarrollador; soy un ingeniero de sistemas por formación. Pienso en procesos, eficiencia y resultados.",
+      "text": "Mi experiencia en mecatrónica y software me enseñó a construir sistemas complejos que funcionan de manera fiable. Ahora aplico esa misma mentalidad a su negocio digital. Analizo sus operaciones, identifico cuellos de botella y construyo una plataforma de e-commerce que no solo se ve bien, sino que es una máquina de ventas eficiente y fácil de gestionar.",
+      "cta": "Conozca más sobre mi filosofía"
+    }
+  },
+  "aboutPage": {
+    "hero": {
+      "title": "Mi Enfoque: Ingeniería + Estrategia Digital",
+      "subtitle": "No solo construyo tiendas en línea; diseño sistemas de venta eficientes. Mi formación como ingeniero me permite ver su negocio como un sistema completo, optimizando cada pieza para asegurar que su operación digital sea rentable y fácil de gestionar."
+    },
+    "bio": {
+      "title": "De la Ingeniería al Retail Digital",
+      "p1": "Mi carrera comenzó en el mundo de la mecatrónica, diseñando y construyendo sistemas automatizados. Esa experiencia me enseñó una lección fundamental: para que algo funcione bien, cada componente debe trabajar en perfecta armonía.",
+      "p2": "Hoy, aplico esa misma filosofía al comercio electrónico. Su tienda online no es solo una página web; es el motor de su negocio digital. Debe integrarse perfectamente con su inventario, su logística de envíos, sus pasarelas de pago y sus estrategias de marketing. Mi trabajo es asegurar que todo el sistema funcione sin fricciones, liberándolo a usted para que se concentre en su producto y sus clientes."
+    },
+    "mission": {
+      "title": "Mi Misión como su Consultor",
+      "p1": "Mi objetivo es simple: ayudar a dueños de negocios a transformar sus ideas en canales de venta rentables y sostenibles. Lo hago a través de un enfoque práctico y transparente, donde su éxito es mi éxito.",
+      "cta_services": "Ver Mis Paquetes de Consultoría",
+      "cta_contact": "Agendar una Llamada"
+    },
+    "hobbies": {
+      "title": "Cuando No Estoy Optimizando Negocios...",
+      "card1_title": "Ingeniería Práctica",
+      "card1_text": "Mantengo mis habilidades de hardware afiladas, experimentando con electrónica y robótica.",
+      "card2_title": "Sistemas Sostenibles",
+      "card2_text": "Diseño y construyo sistemas de acuaponía, fusionando biología y automatización.",
+      "card3_title": "Disciplina y Enfoque",
+      "card3_text": "El entrenamiento en artes marciales es clave en mi filosofía de crecimiento y autodisciplina."
+    }
+  },
+  "servicesPage": {
+    "hero": {
+      "title": "Soluciones Digitales para Cada Etapa de su Negocio",
+      "subtitle": "Desde un lanzamiento rápido hasta una estrategia de crecimiento a largo plazo, tengo un servicio diseñado para sus necesidades y presupuesto."
+    },
+    "express": {
+      "title": "Nivel 1: Paquetes Express (Soluciones Rápidas)",
+      "subtitle": "Para negocios con contenido listo que necesitan una ejecución profesional y veloz a un precio accesible.",
+      "card1_title": "Sitio Web Básico",
+      "card1_text": "Portafolios, Páginas de Reservas.",
+      "card1_price": "$2,500",
+      "card1_price_span": "MXN",
+      "card1_delivery": "Entrega en 1-3 días hábiles",
+
+      "card2_title": "Sitio Web Informativo",
+      "card2_text": "Sitios de 3 a 5 páginas para negocios.",
+      "card2_price": "$4,500",
+      "card2_price_span": "MXN",
+
+      "card2_delivery": "Entrega en 1 semana",
+
+      "card3_title": "E-Commerce Básico",
+      "card3_text": "Tiendas en línea con hasta 20 productos.",
+      "card3_price": "$5,000",
+      "card3_price_span": "MXN",
+      "card3_delivery": "Entrega en 1 semana",
+
+      "includes_title": "Todos los Paquetes Express Incluyen:",
+      "includes_text": "Diseño adaptable a móviles, integración con redes sociales y hasta 3 rondas de revisiones.",
+      "includes_note": "Nota: El cliente proporciona textos/imágenes. Costos de dominio/hosting no incluidos (se brinda asesoría).",
+      "footer_title": "Todos los Paquetes Express Incluyen:",
+      "footer_text": "Diseño adaptable a móviles, integración con redes sociales (instagram, whatsapp, facebook, etc.) y hasta 3 rondas de revisiones.",
+      "footer_note": "Nota: El cliente proporciona textos/imágenes. Costos de dominio/hosting no incluidos (se brinda asesoría para adquirir estos)."
+    },
+    "strategic": {
+      "title": "Nivel 2: Consultoría Estratégica",
+      "subtitle": "Para clientes que buscan un socio de negocio para definir y ejecutar una estrategia digital completa.",
+      "card1_title": "Proyecto Estratégico a Medida",
+      "card1_text": "Un servicio integral que incluye estrategia, análisis de negocio, diseño personalizado y mi acompañamiento de principio a fin para alinear la tecnología con sus metas comerciales.",
+      "card1_list_item1": "Tienda en Línea Profesional (Shopify)",
+      "card1_list_item2": "Tienda en Marketplace (Mercado Libre)",
+      "card1_list_item3": "Configuración de Logística y Pagos",
+      "card1_list_item5": "30 días de Soporte Post-Lanzamiento",
+      "card1_price_title": "Desde $7,000 - $10,000 MXN",
+      "card1_price_detail": "(Pago Único)",
+
+      "card2_title": "Socio de Crecimiento",
+      "card2_text": "El modelo de socio a largo plazo, diseñado para crecer contigo. Su éxito es mi éxito.",
+      "card2_list_item1": "Todo lo del Paquete Lanzamiento",
+      "card2_list_item2": "Gestión Continua de Plataformas",
+      "card2_list_item3": "Análisis y Reportes Semanales",
+      "card2_list_item5": "Optimización de Tasa de Conversión",
+      "card2_price_title": "Cuota de Activación Única + Comisión Mensual",
+      "card2_price_detail": "(La cuota cubre la construcción inicial de sus tiendas)."
+    },
+    "customSoftware": {
+      "title": "Soluciones de Software a Medida",
+      "subtitle": "Para profesionales y negocios con necesidades únicas.",
+      "card_title": "Herramienta Web a Medida",
+      "card_text": "Desde calculadoras interactivas hasta portales para clientes y automatización de procesos.",
+      "card_price_title": "Se cotiza por proyecto"
+    },
+    "addons": {
+      "title": "Servicios Adicionales",
+      "item1_title": "Sesión de Consultoría Estratégica (1 hora)",
+      "item1_subtitle": "Asesoría de 1 hora para resolver dudas puntuales.",
+      "item1_price": "$600 MXN",
+
+      "item2_title": "Mantenimiento Web Mensual",
+      "item2_subtitle": "Actualizaciones, backups y soporte técnico.",
+      "item2_price": "Desde $950 / mes",
+
+      "item3_title": "Configuración de Calendly",
+      "item3_subtitle": "Ideal para el Paquete Express de Sitio Básico.",
+      "item3_price": "$600 (pago único)",
+
+      "item4_title": "Portal de Mayoreo (B2B)",
+      "item4_subtitle": "Implementación de un portal privado en Shopify.",
+      "item4_price": "Desde $5,000 MXN",
+
+      "item5_title": "Consultoría Técnica Especializada",
+      "item5_subtitle": "Integraciones con APIs, automatizaciones, etc.",
+      "item5_price": "Se cotiza por proyecto"
+    },
+    "paymentOptions": {
+      "title": "Alternativas de Pago",
+      "subtitle": "Para proyectos de única ocasión, ofrezco planes de 2 o 3 pagos para mayor flexibilidad.",
+      "button": "Contacte para más detalles"
+    }
+  },
+  "caseStudiesPage": {
+    "hero": {
+      "title": "Casos de Éxito",
+      "subtitle": "Resultados reales para negocios reales. Aquí detallo cómo he ayudado a mis clientes a transformar sus ideas en operaciones digitales exitosas."
+    },
+    "yefrem": {
+      "title": "Yefrem Mx: Partner Estratégico en Operaciones y Crecimiento Digital",
+      "badge": "Servicio: Socio de Crecimiento",
+      "lead": "Una marca de cuidado del cabello con un producto excelente buscaba no solo lanzar su tienda, sino un socio operativo para gestionar toda su estrategia de ventas en línea.",
+      "challenge_title": "El Reto",
+      "challenge_text": "El cliente necesitaba un experto que se hiciera cargo de todo el ecosistema digital—desde la tecnología hasta la gestión diaria y el marketing—permitiéndoles a ellos enfocarse únicamente en el producto y la logística de entrega.",
+      "solution_title": "La Solución Integral",
+
+      "solution_item1_title": "Gestión Tecnológica Completa:",
+      "solution_item1": "Se implementaron y ahora se gestionan continuamente las tiendas en Shopify y Mercado Libre.",
+
+      "solution_item2_title": "Optimización de Operaciones:",
+      "solution_item2": " Manejo de la operación de ventas, desde la generación de guías de envío hasta la integración de impresoras de etiquetas.",
+
+      "solution_item3_title": "Estrategia de Crecimiento: ",
+      "solution_item3": "Implementación de un portal de mayoreo (B2B) y campañas de marketing iniciales para impulsar las primeras ventas.",
+
+      "solution_item4_title": "Análisis y Reportes:",
+      "solution_item4": "Entrega de reportes semanales sobre el rendimiento de las plataformas para tomar decisiones basadas en datos.",
+      "result_title": "El Resultado",
+      "result_text": "Una verdadera asociación estratégica. Yefrem Mx cuenta con un director de operaciones digitales que gestiona activamente su crecimiento, basado en un modelo de comisiones donde el éxito es compartido (10% de las ventas en línea).",
+      "cta_button": "Visitar Tienda en Vivo"
+    },
+    "dragonFocus": {
+      "title": "Dragon Focus: Desarrollo de una Aplicación a Medida",
+      "badge": "Demostración de Capacidad Técnica",
+      "lead": "Este proyecto demuestra la capacidad de construir soluciones complejas y personalizadas cuando las necesidades de un cliente van más allá de las plataformas estándar como Shopify.",
+      "challenge_title": "El Reto",
+      "challenge_text": "Crear una aplicación web full-stack desde cero que fuera segura, escalable y con una experiencia de usuario fluida, gestionando datos de usuarios, sesiones en tiempo real y analíticas.",
+      "solution_title": "La Solución Técnica",
+      "solution_item1": "Desarrollo de un backend robusto con Node.js y Express.js para gestionar la lógica de negocio y las APIs.",
+      "solution_item2": "Implementación de una base de datos MongoDB para un almacenamiento de datos flexible y escalable.",
+      "solution_item3": "Construcción de una interfaz de usuario dinámica e interactiva con React.JS.",
+      "solution_item4": "Aseguramiento de la calidad y la robustez del código aplicando mi experiencia en QA Testing durante todo el ciclo de desarrollo.",
+      "result_title": "El Resultado",
+      "result_text": "Una aplicación web funcional y desplegada en producción, que valida mi habilidad para manejar proyectos de alta complejidad técnica de principio a fin, garantizando un producto final de alta calidad.",
+      "cta_button": "Ver Prototipo Técnico"
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "title": "Hablemos de su Proyecto",
+      "subtitle": "El siguiente paso es una consulta gratuita de 30 minutos para discutir sus objetivos y cómo puedo ayudarle a alcanzarlos. Sin compromiso."
+    },
+    "schedule": {
+      "title": "1. Agende una Llamada Directamente",
+      "text": "La forma más rápida y eficiente de empezar. Elija un horario que le convenga en mi calendario y la reunión quedará confirmada al instante."
+    },
+    "form": {
+      "title": "2. O Envíeme un Mensaje",
+      "text": "Si prefiere, puede enviarme un mensaje con los detalles de su proyecto o cualquier pregunta que tenga.",
+      "nameLabel": "Su Nombre",
+      "emailLabel": "Su Email",
+      "messageLabel": "Su Mensaje",
+      "button": "Enviar Mensaje"
+    },
+    "messages": {
+      "success": "¡Gracias por su mensaje! Me pondré en contacto con usted pronto.",
+      "error": "Lo sentimos, hubo un error al enviar su mensaje. Por favor, intente de nuevo más tarde."
+    }
+  },
+  "footer": {
+    "subtitle": "Consultor de Operaciones y Comercio Digital",
+    "rights": "Todos los derechos reservados."
+  }
+}

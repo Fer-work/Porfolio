@@ -8,11 +8,9 @@
   <main class="flex-grow-1">
     <section class="py-5 text-center bg-light">
       <div class="container">
-        <h1 class="display-4 fw-bold">Mi Enfoque: Ingeniería + Estrategia Digital</h1>
+        <h1 class="display-4 fw-bold"><%= t('aboutPage.hero.title') %></h1>
         <p class="lead mt-3 mx-auto" style="max-width: 800px;">
-          No solo construyo tiendas en línea; diseño sistemas de venta eficientes. Mi formación como ingeniero me
-          permite ver su negocio como un sistema completo, optimizando cada pieza para asegurar que su
-          operación digital sea rentable y fácil de gestionar.
+          <%= t('aboutPage.hero.subtitle') %>
         </p>
       </div>
     </section>
@@ -25,26 +23,17 @@
               class="img-fluid rounded shadow" style="max-width: 300px; width: 100%;" />
           </div>
           <div class="col-lg-8 ps-lg-5">
-            <h2 class="fw-bold text-primary">De la Ingeniería al Retail Digital</h2>
-            <p>
-              Mi carrera comenzó en el mundo de la mecatrónica, diseñando y construyendo sistemas automatizados. Esa
-              experiencia me enseñó una lección fundamental: para que algo funcione bien, cada componente debe trabajar
-              en perfecta armonía.
-            </p>
-            <p>
-              Hoy, aplico esa misma filosofía al comercio electrónico. Su tienda online no es solo una página web; es el
-              motor de su negocio digital. Debe integrarse perfectamente con su inventario, su logística de envíos, sus
-              pasarelas de pago y sus estrategias de marketing. Mi trabajo es asegurar que todo el sistema funcione sin
-              fricciones, liberándolo a usted para que se concentre en su producto y sus clientes.
-            </p>
-            <h2 class="fw-bold mt-4 text-primary">Mi Misión como su Consultor</h2>
-            <p>
-              Mi objetivo es simple: ayudar a dueños de negocios a transformar sus ideas en canales de venta rentables y
-              sostenibles. Lo hago a través de un enfoque práctico y transparente, donde su éxito es mi éxito.
-            </p>
+            <h2 class="fw-bold text-primary"><%= t('aboutPage.bio.title') %></h2>
+            <p><%= t('aboutPage.bio.p1') %></p>
+            <p><%= t('aboutPage.bio.p2') %></p>
+
+            <h2 class="fw-bold mt-4 text-primary"><%= t('aboutPage.mission.title') %></h2>
+            <p><%= t('aboutPage.mission.p1') %></p>
             <div class="mt-4">
-              <a href="/servicios" class="btn btn-primary">Ver Mis Paquetes de Consultoría</a>
-              <a href="/contact" class="btn btn-outline-secondary ms-2">Agendar una Llamada</a>
+              <a href="/<%= i18n.language %>/servicios"
+                class="btn btn-primary"><%= t('aboutPage.mission.cta_services') %></a>
+              <a href="/<%= i18n.language %>/contact"
+                class="btn btn-outline-secondary ms-2"><%= t('aboutPage.mission.cta_contact') %></a>
             </div>
           </div>
         </div>
@@ -53,7 +42,7 @@
 
     <section class="py-5 bg-light">
       <div class="container">
-        <h2 class="text-center fw-bold mb-4">Cuando No Estoy Optimizando Negocios...</h2>
+        <h2 class="text-center fw-bold mb-4"><%= t('aboutPage.hobbies.title') %></h2>
         <div class="row g-4 justify-content-center">
 
           <div class="col-sm-6 col-md-6 col-lg-3 d-flex align-items-stretch">
@@ -61,9 +50,8 @@
               <img src="/hobbies/Electronics.jpg" class="card-img-top" style="height: 200px; object-fit: cover;"
                 alt="A 555 timer circuit project" />
               <div class="card-body">
-                <h5 class="card-title text-center">Ingeniería Práctica</h5>
-                <p class="card-text">Mantengo mis habilidades de hardware afiladas, experimentando con electrónica y
-                  robótica.</p>
+                <h5 class="card-title text-center"><%= t('aboutPage.hobbies.card1_title') %></h5>
+                <p class="card-text"><%= t('aboutPage.hobbies.card1_text') %></p>
               </div>
             </div>
           </div>
@@ -73,8 +61,8 @@
               <img src="/hobbies/AquaponicsSquare.JPG" class="card-img-top" style="height: 200px; object-fit: cover;"
                 alt="A vertical aquaponics farm prototype" />
               <div class="card-body">
-                <h5 class="card-title text-center">Sistemas Sostenibles</h5>
-                <p class="card-text">Diseño y construyo sistemas de acuaponía, fusionando biología y automatización.</p>
+                <h5 class="card-title text-center"><%= t('aboutPage.hobbies.card2_title') %></h5>
+                <p class="card-text"><%= t('aboutPage.hobbies.card2_text') %></p>
               </div>
             </div>
           </div>
@@ -84,9 +72,8 @@
               <img src="/hobbies/YellowBeltSquare.jpg" class="card-img-top"
                 style="height: 200px; object-fit: cover; object-position: top;" alt="Fernando in martial arts gear" />
               <div class="card-body">
-                <h5 class="card-title text-center">Disciplina y Enfoque</h5>
-                <p class="card-text">El entrenamiento en artes marciales es clave en mi filosofía de crecimiento y
-                  autodisciplina.</p>
+                <h5 class="card-title text-center"><%= t('aboutPage.hobbies.card3_title') %></h5>
+                <p class="card-text"><%= t('aboutPage.hobbies.card3_text') %></p>
               </div>
             </div>
           </div>

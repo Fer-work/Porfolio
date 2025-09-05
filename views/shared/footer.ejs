@@ -3,20 +3,10 @@
     <div class="row">
       <div class="col-12">
         <h5 class="fw-bold">Fernando Sanchez Gutierrez</h5>
-        <p class="text-muted">Consultor de Operaciones y Comercio Digital</p>
-
-        <ul class="list-inline my-4">
-          <li class="list-inline-item mx-2"><a href="/" class="text-light text-decoration-none">Inicio</a></li>
-          <li class="list-inline-item mx-2"><a href="/servicios" class="text-light text-decoration-none">Servicios</a>
-          </li>
-          <li class="list-inline-item mx-2"><a href="/casos-de-exito" class="text-light text-decoration-none">Casos de
-              Éxito</a></li>
-          <li class="list-inline-item mx-2"><a href="/about" class="text-light text-decoration-none">Sobre Mí</a></li>
-          <li class="list-inline-item mx-2"><a href="/contact" class="text-light text-decoration-none">Contacto</a></li>
-        </ul>
+        <p class="text-muted"><%= t('footer.subtitle') %></p>
 
         <p class="small mt-4 mb-0">
-          &copy; <%= new Date().getFullYear() %> Fernando Sanchez Gutierrez. Todos los derechos reservados.
+          &copy; <%= new Date().getFullYear() %> Fernando Sanchez Gutierrez. <%= t('footer.rights') %>
         </p>
 
       </div>

@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include('shared/metaData', { title: "Contacto" }) %>
+<%- include('shared/metaData', { title: t('nav.contact') }) %>
 
 <body class="d-flex flex-column min-vh-100"> <%- include('shared/header') %>
 
   <main class="flex-grow-1">
     <section class="py-5 text-center bg-light">
       <div class="container">
-        <h1 class="display-4 fw-bold">Hablemos de su Proyecto</h1>
+        <h1 class="display-4 fw-bold"><%= t('contactPage.hero.title') %></h1>
         <p class="lead mt-3 mx-auto" style="max-width: 800px;">
-          El siguiente paso es una consulta gratuita de 30 minutos para discutir sus objetivos y cómo puedo ayudarle a
-          alcanzarlos. Sin compromiso.
+          <%= t('contactPage.hero.subtitle') %>
         </p>
       </div>
     </section>
@@ -19,23 +18,33 @@
       <div class="container">
         <div class="row g-5">
           <div class="col-lg-7">
-            <h2 class="fw-bold mb-3">1. Agende una Llamada Directamente</h2>
-            <p>La forma más rápida y eficiente de empezar. Elija un horario que le convenga en mi calendario y la
-              reunión quedará confirmada al instante.</p>
+            <h2 class="fw-bold mb-3"><%= t('contactPage.schedule.title') %></h2>
+            <p><%= t('contactPage.schedule.text') %></p>
+
+            <!-- INICIO DE LA LÓGICA DE CALENDLY BILINGÜE -->
+            <% if (i18n.language === 'es') { %>
+            <!-- Widget de Calendly en Español -->
             <div class="calendly-inline-widget" data-url="https://calendly.com/fer-fersanchezgutierrez/30min"
               style="min-width: 320px; width: 100%; height: 650px;"></div>
+            <% } else { %>
+            <!-- Widget de Calendly en Inglés -->
+            <div class="calendly-inline-widget"
+              data-url="https://calendly.com/fer-fersanchezgutierrez/consulta-gratuita-de-30-minutos-clone"
+              style="min-width: 320px; width: 100%; height: 650px;"></div>
+            <% } %>
             <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <!-- FIN DE LA LÓGICA DE CALENDLY BILINGÜE -->
+
           </div>
 
           <div class="col-lg-5">
-            <h2 class="fw-bold mb-3">2. O Envíeme un Mensaje</h2>
-            <p>Si prefiere, puede enviarme un mensaje con los detalles de su proyecto o cualquier pregunta que tenga.
-            </p>
+            <h2 class="fw-bold mb-3"><%= t('contactPage.form.title') %></h2>
+            <p><%= t('contactPage.form.text') %> </p>
 
             <%# Logic for displaying SUCCESS or GENERAL error messages %>
             <% if (typeof messageSent !== 'undefined' && messageSent !== null) { %>
             <% if (messageSent === true) { %>
-            <div class="alert alert-success" role="alert"><%= messageText %></div>
+            <div class="alert alert-success" role="alert"><%= messageText %> </div>
             <% } else if (messageSent === false && errors.length === 0) { %>
             <%# This shows general errors like "email failed to send", but not validation errors %>
             <div class="alert alert-danger" role="alert"><%= messageText %></div>
@@ -43,9 +52,11 @@
             <% } %>
 
             <div class="bg-white border rounded p-4">
-              <form action="/contact" method="POST" novalidate>
+              <form action="/contact" method="POST">
+                <input type="hidden" name="lang" value="<%= i18n.language %>">
+                <!-- Name Field -->
                 <div class="mb-3">
-                  <label for="name" class="form-label">Su Nombre</label>
+                  <label for="name" class="form-label"><%= t('contactPage.form.nameLabel') %></label>
                   <input type="text" class="form-control <%= errors.find(e => e.path === 'name') ? 'is-invalid' : '' %>"
                     id="name" name="name" required value="<%= typeof formData !== 'undefined' ? formData.name : '' %>">
                   <% const nameError = errors.find(e => e.path === 'name') %>
@@ -54,8 +65,9 @@
                   <% } %>
                 </div>
 
+                <!-- Email Field -->
                 <div class="mb-3">
-                  <label for="email" class="form-label">Su Email</label>
+                  <label for="email" class="form-label"><%= t('contactPage.form.emailLabel') %></label>
                   <input type="email"
                     class="form-control <%= errors.find(e => e.path === 'email') ? 'is-invalid' : '' %>" id="email"
                     name="email" required value="<%= typeof formData !== 'undefined' ? formData.email : '' %>">
@@ -65,8 +77,9 @@
                   <% } %>
                 </div>
 
+                <!-- Message Field -->
                 <div class="mb-3">
-                  <label for="message" class="form-label">Su Mensaje</label>
+                  <label for="message" class="form-label"><%= t('contactPage.form.messageLabel') %></label>
                   <textarea class="form-control <%= errors.find(e => e.path === 'message') ? 'is-invalid' : '' %>"
                     id="message" name="message" rows="5"
                     required><%= typeof formData !== 'undefined' ? formData.message : '' %></textarea>
@@ -77,7 +90,7 @@
                 </div>
 
                 <div class="d-grid">
-                  <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                  <button type="submit" class="btn btn-primary"><%= t('contactPage.form.button') %></button>
                 </div>
               </form>
             </div>
